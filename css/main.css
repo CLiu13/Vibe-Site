@@ -1,6 +1,9 @@
 h1 {
     text-align: center;
 }
+h2{
+	text-align: center;
+}
 .jumbotron{
 	background-color: white;
 }
@@ -34,7 +37,7 @@ h1 {
 	border-top-left-radius: 0px!important;
 	border-top-right-radius: 0px!important;
 }
-.vibeInput{
+vibeInput{
 	max-width: 50%;
 	margin: 0 auto;
 }
