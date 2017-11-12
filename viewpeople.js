@@ -22,10 +22,13 @@
         var people = data.val();
         var keys = Object.keys(people);
         console.log(keys);
+        var dataSet = {};
         for (var i = 0; i < keys.length; i++) {
             var k = keys[i];
-            var name = names[k].name;
-            console.log(name);
+            var fbName = people[k].fbName;
+            console.log(people[k]);
+
+            
         }
 
     }
