@@ -15,7 +15,7 @@ var database = firebase.database();
 
 //Retrieving data
 var ref = database.ref('people');
-ref.on('value', gotData, errData);
+ref.once('value', gotData, errData);
 
 function gotData(data) {
   // console.log(data.val());
