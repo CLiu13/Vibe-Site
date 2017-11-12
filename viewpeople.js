@@ -18,7 +18,16 @@
     ref.on('value', gotData, errData);
 
     function gotData(data) {
-        console.log(data.val());
+        // console.log(data.val());
+        var people = data.val();
+        var keys = Object.keys(people);
+        console.log(keys);
+        for (var i = 0; i < keys.length; i++) {
+            var k = keys[i];
+            var name = names[k].name;
+            console.log(name);
+        }
+
     }
 
     function errData(data) {
