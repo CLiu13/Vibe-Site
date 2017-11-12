@@ -19,13 +19,31 @@
 	<link rel="stylesheet" type="text/css" href="css/scaling.css">
 </head>
 
-<body>
+<body class="jumbotron-top">
+	<nav class="navbar navbar-default  navbar-fixed-top navnav listt">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+					<button type="button" class="btn btn-default navbar-toggle collapsed navbutton">Toggle Vibe</button>
+				<a href="viewpeople.html" class="btn btn-default navbar-toggle collapsed navbutton" role="button">Reload</a>
+
+				<a class="navbar-brand" href="#"> Vibe</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
 	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
 	<script src="viewpeople.js">
 		console.log(people);
 	</script>
+<div  style="width:75%; margin:0 auto;">
 	<ul class="list-group" id="list">
 	</ul>
+</div>
 </body>
 
 </html>

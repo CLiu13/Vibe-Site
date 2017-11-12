@@ -26,12 +26,32 @@ function gotData(data) {
   for (var i = 0; i < keys.length; i++) {
     var k = keys[i];
     var fbName = people[k].fbName;
+    var fbOnline = people[k].fbOnline;
     var node = document.createElement("LI");
+    var span = document.createElement("SPAN");
+    var positive = document.createElement("SPAN");
+    var negative = document.createElement("SPAN");
     var textnode = document.createTextNode(fbName);
+    positive.setAttribute("aria-hidden", "true");
+    negative.setAttribute("aria-hidden", "true");
     node.appendChild(textnode);
-    node.setAttribute("id", i);
+    node.setAttribute("id", k);
     node.setAttribute("class", "list-group-item");
     document.getElementById("list").appendChild(node);
+    span.setAttribute("class", "badge");
+    span.setAttribute("id", i);
+    document.getElementById(k).appendChild(span);
+    if (fbOnline === true) {
+      console.log(true)
+      positive.setAttribute("class", "glyphicon glyphicon-ok-sign");
+      document.getElementById(i).appendChild(positive);
+    } else {
+      console.log(false)
+      negative.setAttribute("class", "glyphicon glyphicon-remove-sign");
+      document.getElementById(i).appendChild(negative);
+    }
+
+
 
 
   }
