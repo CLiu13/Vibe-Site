@@ -31,14 +31,18 @@ function gotData(data) {
     var k = keys[i];
     var fbName = people[k].fbName;
     var fbOnline = people[k].fbOnline;
+    var fbEmail = people[k].fbEmail;
     var node = document.createElement("LI");
+
     var span = document.createElement("SPAN");
     var positive = document.createElement("SPAN");
     var negative = document.createElement("SPAN");
     var textnode = document.createTextNode(fbName);
+    var textNode2=document.createTextNode(fbEmail);
     positive.setAttribute("aria-hidden", "true");
     negative.setAttribute("aria-hidden", "true");
     node.appendChild(textnode);
+    node.appendChild(textNode2);
     node.setAttribute("id", k);
     node.setAttribute("class", "list-group-item");
     document.getElementById("list").appendChild(node);
