@@ -19,6 +19,17 @@ ref.on('value', gotData, errData);
 
 function gotData(data) {
   // console.log(data.val());
+  if (people = null) {
+
+  } else {
+    people = [];
+    var parent = document.getElementById("list");
+    var child = document.getElementsByClassName("list-group-item");
+    parent.removeChild(child);
+    console.log("death")
+    
+  }
+
   var people = data.val();
   var keys = Object.keys(people);
   console.log(keys);
@@ -57,6 +68,7 @@ function gotData(data) {
   }
 
 }
+
 
 function errData(data) {
   console.log("Error");
